@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ServerTableViewCell" customModule="MinecraftServerStatus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view opaque="NO" alpha="0.29999999999999999" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Anm-44-P8B" customClass="TileBackgroundView" customModule="MinecraftServerStatus" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="dirtblock"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="xPixels">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="yPixels">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="stz-kK-aKx">
+                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="stz-kK-aKx" secondAttribute="height" multiplier="1:1" id="QqJ-n4-hMq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XaY-PX-y1e"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="BW8-Wp-ZK1">
+                        <rect key="frame" x="72.5" y="5" width="242.5" height="57.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXN-zf-0vC">
+                                <rect key="frame" x="0.0" y="0.0" width="242.5" height="17"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-jT-eJR" customClass="AddressTextField" customModule="MinecraftServerStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="225.5" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAU-4r-LD3" customClass="UIStatusView" customModule="MinecraftServerStatus" customModuleProvider="target">
+                                        <rect key="frame" x="225.5" y="0.0" width="17" height="17"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zAU-4r-LD3" secondAttribute="height" multiplier="1:1" id="Re6-dL-kqR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JZ-Ob-lkA" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="0.0" y="20" width="242.5" height="17.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scrollRate">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fE9-4e-aJZ">
+                                <rect key="frame" x="0.0" y="40.5" width="242.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BW8-Wp-ZK1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3PO-gw-8AW"/>
+                    <constraint firstAttribute="trailing" secondItem="BW8-Wp-ZK1" secondAttribute="trailing" constant="5" id="3jz-Ax-2wr"/>
+                    <constraint firstItem="stz-kK-aKx" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="AFP-hd-HQe"/>
+                    <constraint firstAttribute="bottom" secondItem="BW8-Wp-ZK1" secondAttribute="bottom" constant="5" id="MwJ-Ne-IkH"/>
+                    <constraint firstItem="BW8-Wp-ZK1" firstAttribute="leading" secondItem="stz-kK-aKx" secondAttribute="trailing" constant="5" id="jf7-w2-bBr"/>
+                    <constraint firstItem="BW8-Wp-ZK1" firstAttribute="leading" secondItem="stz-kK-aKx" secondAttribute="trailing" constant="5" id="tJI-1J-dJb"/>
+                    <constraint firstItem="stz-kK-aKx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="xWR-3n-KVw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Anm-44-P8B" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" id="0Qh-wm-M72"/>
+                <constraint firstItem="Anm-44-P8B" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" id="4MD-za-be9"/>
+                <constraint firstItem="stz-kK-aKx" firstAttribute="top" secondItem="ORj-wj-xcB" secondAttribute="top" id="EsT-0K-nrE"/>
+                <constraint firstItem="Anm-44-P8B" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" id="HxV-XY-8kL"/>
+                <constraint firstItem="Anm-44-P8B" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" id="JP6-0G-y01"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ORj-wj-xcB"/>
+            <connections>
+                <outlet property="addressTextField" destination="0pB-jT-eJR" id="B8M-w2-drM"/>
+                <outlet property="icon" destination="stz-kK-aKx" id="wNM-bY-D9d"/>
+                <outlet property="motdLabel" destination="8JZ-Ob-lkA" id="bCi-bU-qcG"/>
+                <outlet property="playersLabel" destination="fE9-4e-aJZ" id="Nii-h5-Hgm"/>
+                <outlet property="statusIndicator" destination="zAU-4r-LD3" id="i0h-eN-cIb"/>
+            </connections>
+            <point key="canvasLocation" x="-29" y="76"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dirtblock" width="512" height="512"/>
+    </resources>
+</document>

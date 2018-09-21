@@ -1,0 +1,6 @@
+framework module Pods_MinecraftServerStatusUITests {
+  umbrella header "Pods-MinecraftServerStatusUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
